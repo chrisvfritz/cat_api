@@ -18,6 +18,14 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']
 
+  spec.add_dependency 'rest-client', '~> 1.7.2'
+  spec.add_dependency 'nokogiri', '~> 1.6.5'
+
   spec.add_development_dependency 'bundler', '~> 1.7'
   spec.add_development_dependency 'rake', '~> 10.0'
+  spec.add_development_dependency 'rspec', '~> 3.1.0'
+  spec.add_development_dependency 'simplecov', '~> 0.9.1'
+  spec.add_development_dependency 'guard-rspec', '~> 4.5.0'
 end
+
+
