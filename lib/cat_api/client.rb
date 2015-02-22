@@ -12,7 +12,7 @@ class CatAPI::Client
 
   def get_images(options={})
     options = @defaults.merge(options)
-    options.delete_if {|k,v| v.nil? || v.empty? }
+    options.delete_if {|k,v| v.nil? || ( v.kind_of?(Array) && v.empty? ) }
     response = get "#{ BASE_URL }images/get?format=xml&#{ URI.encode_www_form options }"
     CatAPI::ImageSearch.new( Nokogiri::XML(response) ).results
   end
