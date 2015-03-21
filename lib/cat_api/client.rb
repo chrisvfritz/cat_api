@@ -11,7 +11,6 @@ class CatAPI::Client
   def initialize(defaults={})
     @defaults = defaults
     response = get "#{ BASE_URL }categories/list"
-    # @categories = CatAPI::Categories.new( Nokogiri::XML(response) )
     @categories = CatAPI::Categories.new( Nokogiri::XML(response) ).results
   end
 
