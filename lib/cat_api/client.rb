@@ -1,13 +1,17 @@
 require 'rest-client'
 require 'nokogiri'
 require 'cat_api/image_search'
+require 'cat_api/categories'
 
 class CatAPI::Client
+  attr_reader :categories
 
   BASE_URL = 'http://thecatapi.com/api/'
 
   def initialize(defaults={})
     @defaults = defaults
+    response = get "#{ BASE_URL }categories/list"
+    @categories = CatAPI::Categories.new( Nokogiri::XML(response) ).results
   end
 
   def get_images(options={})
