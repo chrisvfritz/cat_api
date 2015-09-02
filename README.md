@@ -1,6 +1,6 @@
 # CatAPI
 
-I'm not sure how this happened, but there was not yet a Ruby wrapper for the awesome Cat API. Problems solved. I'm putting this together for use in a class, so there are no specs and it only hits a single endpoint, but it's something.
+I'm not sure how this happened, but there was not yet a Ruby wrapper for the awesome Cat API. Well, problem solved. I'm putting this together for use in a class, so there are no specs and it only hits a single endpoint, but it's something.
 
 ## Installation
 
